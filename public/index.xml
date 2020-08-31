@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AWS Cloud Security Virtual Event</title>
+    <link>/</link>
+    <description>Recent content on AWS Cloud Security Virtual Event</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 18 Nov 2019 17:11:28 +1100</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>1. Overview and Setup</title>
+      <link>/workshops/module1/scenario/</link>
+      <pubDate>Mon, 18 Nov 2019 17:11:06 +1100</pubDate>
+      
+      <guid>/workshops/module1/scenario/</guid>
+      <description>In today&amp;rsquo;s world of modern application development and immutable infrastructure deployed as code, there remains a number of reasons why engineers require shell-level access to their instances on occasion. They might need to kill runaway processes, debug problems on a live machine, or fine-tune configurations during development; all while maintaining a strong security profile.
+In this session, you will configure AWS Systems Manager Session Manager to provide secure interactive access to your managed instances without the need to expose inbound ports, manage bastion hosts, or manage SSH keys.</description>
+    </item>
+    
+    <item>
+      <title>1. Scenario</title>
+      <link>/workshops/module3/scenario/</link>
+      <pubDate>Mon, 18 Nov 2019 17:11:28 +1100</pubDate>
+      
+      <guid>/workshops/module3/scenario/</guid>
+      <description>Overview In this workshop, you will have an environment provisioned consisting of two Amazon Linux web servers behind an application load balancer. The web servers will be running a PHP web site that contains several vulnerabilities. You will then use AWS Web Application Firewall (WAF), Amazon Inspector and AWS Systems Manager to identify the vulnerabilities and remediate them.
+Scenario Welcome to Widgets LLC! You have just joined the team and your first task is to enhance security for the company website.</description>
+    </item>
+    
+    <item>
+      <title>2. Perimeter Layer - Assess</title>
+      <link>/workshops/module3/perimeter-assess/</link>
+      <pubDate>Mon, 18 Nov 2019 17:11:28 +1100</pubDate>
+      
+      <guid>/workshops/module3/perimeter-assess/</guid>
+      <description>Environment Setup   Click here if you&amp;#39;re not at an AWS event or are using your own account   In order to complete these workshops, you&amp;rsquo;ll need a valid, usable AWS Account. Use a personal account or create a new AWS account to ensure you have the necessary access and that you do not accidentally modify corporate resources. Do not use an AWS account from the company you work for.</description>
+    </item>
+    
+    <item>
+      <title>3. Perimeter Layer - Remediate</title>
+      <link>/workshops/module3/perimeter-remediate/</link>
+      <pubDate>Mon, 18 Nov 2019 17:11:28 +1100</pubDate>
+      
+      <guid>/workshops/module3/perimeter-remediate/</guid>
+      <description>Mitigating Common Web Application Attack Vectors Using AWS WAF In the previous Build Phase, you identified several vulnerabilities in your web application. You are now going to design and implement an AWS WAF ruleset to help mitigate these vulnerabilities. In this section you will do the following tasks:
+ Identify the WAF ACL for your site AWS WAF Rule design and considerations Console Walkthrough - Creating a Rule WAF Rule Creation and Solutions  Please ensure you are using the improved AWS WAF console and API experience for this workshop.</description>
+    </item>
+    
+    <item>
+      <title>1. Architecture</title>
+      <link>/workshops/module4/scenario/</link>
+      <pubDate>Mon, 18 Nov 2019 17:11:28 +1100</pubDate>
+      
+      <guid>/workshops/module4/scenario/</guid>
+      <description>Workshop architecture This environment consists of a VPC with two subnets. The subnets contains an Amazon EC2 bastion host running Amazon Linux 2 used for running AWS CLI commands and a private, not publicly-accessible, Amazon RDS MySQL database instance. The subnets are chosen based on the availability of an interface VPC endpoint for AWS Secrets Manager. The VPC also contains an AWS Fargate container running the Amazon Linux 2 operating system.</description>
+    </item>
+    
+    <item>
+      <title>4. Perimeter Layer - Verify</title>
+      <link>/workshops/module3/perimeter-verify/</link>
+      <pubDate>Mon, 18 Nov 2019 17:11:28 +1100</pubDate>
+      
+      <guid>/workshops/module3/perimeter-verify/</guid>
+      <description>Mitigating Common Web Application Attack Vectors Using AWS WAF In the previous remediation phase, you implemented an AWS WAF ruleset to protect your site from common attack vectors. You are now going to reassess the posture of the site to confirm the rules are performing as intended and blocking the simulated malicious requests.
+ Confirm malicious requests are blocked by WAF policy Implement WAF monitoring dashboard using Amazon CloudWatch (Optional)  Confirm malicious requests are blocked by WAF policy If needed, start a Session Manager connection to your Red Team Host, the scanner script can be invoked by typing the following command:</description>
+    </item>
+    
+    <item>
+      <title>2. RDS with Secrets Manager</title>
+      <link>/workshops/module4/rds/</link>
+      <pubDate>Mon, 18 Nov 2019 17:11:28 +1100</pubDate>
+      
+      <guid>/workshops/module4/rds/</guid>
+      <description>Overview In this phase, you will learn how to use AWS Secrets Manager for rotating the password for a private Amazon RDS database. As a reminder, the environment provisioned by CloudFormation is shown in the figure below. You will not be working with the AWS Fargate container in this phase so it is not shown below.
+Important For the sake of simplicity, this tutorial uses jq to parse the secret value into environment variables to allow for easy command line manipulation.</description>
+    </item>
+    
+    <item>
+      <title>5. Host Layer - Assess</title>
+      <link>/workshops/module3/host-assess/</link>
+      <pubDate>Mon, 18 Nov 2019 17:11:28 +1100</pubDate>
+      
+      <guid>/workshops/module3/host-assess/</guid>
+      <description>Identifying and Remediating Host Vulnerabilities - Host Layer Round In the previous phase, CloudFormation deployed a stack containing some Amazon EC2 instances behind an application load balancer. You are now going to learn about AWS Inspector. AWS Inspector assesses the instances and identifies security findings that you will later remediate.
+Explore Amazon Inspector You are now going to learn about AWS Inspector terms and explore the Inspector console.
+Understanding Amazon Inspector targets   Go to the Amazon Inspector console.</description>
+    </item>
+    
+    <item>
+      <title>6. Host Layer - Remediate</title>
+      <link>/workshops/module3/host-remediate/</link>
+      <pubDate>Mon, 18 Nov 2019 17:11:28 +1100</pubDate>
+      
+      <guid>/workshops/module3/host-remediate/</guid>
+      <description>Identifying and Remediating Host Vulnerabilities - Host Layer Round In the previous Assess Phase, you installed Amazon Inspector on the instances that were launched as a result of the CloudFormation stack. You will now use AWS Systems Manager Patch Manager to apply patches. You will use tags to select the instances as well.
+In this section you will do the following tasks:
+ Use AWS Systems Manager Patch Manager to set up patching Use AWS Systems Manager Run Command to check the status of the patching  Use AWS Systems Manager Patch Manager   Go to the Systems Manager console and select Patch Manager from the menu on the left.</description>
+    </item>
+    
+    <item>
+      <title>3. Fargate with Secrets Manager</title>
+      <link>/workshops/module4/fargate/</link>
+      <pubDate>Mon, 18 Nov 2019 17:11:28 +1100</pubDate>
+      
+      <guid>/workshops/module4/fargate/</guid>
+      <description>Prerequisites  You must complete the RDS phase of this builder session before starting this phase. You should be familiar with Docker concepts.  Overview In this phase, you will learn how to use AWS Secrets Manager with AWS Fargate. AWS Fargate is a compute engine for Amazon Elastic Container Service that allows you to run containers without having to manage servers or clusters. With AWS Fargate, you no longer have to provision, configure, and scale clusters of virtual machines to run containers.</description>
+    </item>
+    
+    <item>
+      <title>7. Host Layer - Verify</title>
+      <link>/workshops/module3/host-verify/</link>
+      <pubDate>Mon, 18 Nov 2019 17:11:28 +1100</pubDate>
+      
+      <guid>/workshops/module3/host-verify/</guid>
+      <description>Identifying and Remediating Host Vulnerabilities - Host Layer Round - Verify Phase Now that you have remediated the environment, you will again use Amazon Inspector to assess the environment again to see how the patching affected the overall security posture of the environment. You will first run an Inspector assessment. While the assessment is running, you will explore some other AWS capabilities. Lastly, you will return to Inspector to see the results of the new assessment to the effects of the patching that you did with Systems Manager Patch Manager.</description>
+    </item>
+    
+    <item>
+      <title>2. Evaluate Session Manager Configuration</title>
+      <link>/workshops/module1/evaluate/</link>
+      <pubDate>Mon, 18 Nov 2019 17:11:28 +1100</pubDate>
+      
+      <guid>/workshops/module1/evaluate/</guid>
+      <description>To begin our evaluation, we need to examine the default configuration and behavior of Session Manager and determine what is needed to meet the requirements given to us for this project.
+Evaluate cross-platform behavior, security context and default privilege levels
+ Under Instances &amp;amp; Nodes in the AWS Systems Manager navigation menu, browse to the Managed Instances console. Select the session-manager-linux-prod instance, click Actions, click Start Session.  Now that we have established an interactive shell to the instance, let&amp;rsquo;s determine our user context on the instance and evaluate our privilege level.</description>
+    </item>
+    
+    <item>
+      <title>1. AWS Systems Manager Lab Setup</title>
+      <link>/workshops/module2/sysmgrlabsetup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/workshops/module2/sysmgrlabsetup/</guid>
+      <description>Lab Setup In this part of the lab you will set up the necessary resources in your environment to proceed with the Systems Manager labs.
+Create an EC2 Key Pair   Use your administrator account to access the Amazon EC2 console at https://console.aws.amazon.com/ec2/.
+In 2019 the EC2 console was updated to have a consistent look and feel with other AWS Services, and to improve the user experience. This lab guide shows the new and improved console experience.</description>
+    </item>
+    
+    <item>
+      <title>3. Configure Systems Manager Session Manager</title>
+      <link>/workshops/module1/configure/</link>
+      <pubDate>Mon, 18 Nov 2019 17:11:28 +1100</pubDate>
+      
+      <guid>/workshops/module1/configure/</guid>
+      <description>As we observed during our initial evaluation, our activity within a session is not yet being logged. In this step, we are going to configure Session Manager to store session log data in a specified Amazon S3 bucket for auditing purposes. The default option is for logs to be sent to an encrypted S3 bucket. Encryption is performed using the key specified for the bucket.
+Create a Custom Policy for Amazon S3 Bucket Access</description>
+    </item>
+    
+    <item>
+      <title>2. AWS Systems Manager: Operations as Code</title>
+      <link>/workshops/module2/systemsmanager/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/workshops/module2/systemsmanager/</guid>
+      <description>Operations as Code with Systems Manager  In a traditional environment you would have to set up the systems and software to perform administration activities. You would require a server to execute your scripts. You would need to manage authentication credentials across all of your systems.
+Operations as code reduces the resources, time, risk, and complexity of performing operations tasks and ensures consistent execution. You can take operations as code and automate operations activities by using scheduling and event triggers.</description>
+    </item>
+    
+    <item>
+      <title>3. AWS Systems Manager: Inventory</title>
+      <link>/workshops/module2/inventory/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/workshops/module2/inventory/</guid>
+      <description>Inventory with Systems Manager   If you are using an AWS Event Engine account you might see an error at the top of your screen when accessing features with resource group integration. These errors can safely be ignored, they will not impact your ability to perform any of the steps in the lab.
+  KEY CONCEPT: AWS Systems Manager - Inventory AWS Systems Manager collects information about your instances and the software installed on them, helping you to understand your system configurations and installed applications.</description>
+    </item>
+    
+    <item>
+      <title>4. Use Port Forwarding For Web Redirection</title>
+      <link>/workshops/module1/portforward/</link>
+      <pubDate>Mon, 18 Nov 2019 17:11:28 +1100</pubDate>
+      
+      <guid>/workshops/module1/portforward/</guid>
+      <description>Session Manager Port Forwarding feature allows you to tunnel data from remote port on instance to a local port on client machine. This enables web redirection for user without opening inbound ports. You can use this feature using AWS CLI which requires you to install session-manager-plugin on client machine. It uses public SSM document AWS-StartPortForwardingSession that allows users to provide local and remote port numbers to enable port forwarding.
+Review SSM Document</description>
+    </item>
+    
+    <item>
+      <title>4. AWS Systems Manager: State Manager</title>
+      <link>/workshops/module2/statemgr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/workshops/module2/statemgr/</guid>
+      <description>State Manager with Systems Manager  KEY CONCEPT: AWS Systems Manager - State Manager In State Manager, an association is the result of binding configuration information that defines the state you want your instances to be in to the instances themselves. This information specifies when and how you want instance-related operations to run that ensure your Amazon EC2 and hybrid infrastructure is in an intended or consistent state.
+An association defines the state you want to apply to a set of targets.</description>
+    </item>
+    
+    <item>
+      <title>5. Enable SSH Through Session Manager</title>
+      <link>/workshops/module1/ssh/</link>
+      <pubDate>Mon, 18 Nov 2019 17:11:28 +1100</pubDate>
+      
+      <guid>/workshops/module1/ssh/</guid>
+      <description>Session Manager can be configured to connect to remote instance using Secure Shell(SSH) without opening inbound port or maintaining bastion host. You can also copy files between local and remote machine using Secure Copy Protocol(SCP). This feature uses public SSM document AWS-StartSSHSession.
+Review SSM Document
+ Browse to the Systems Manager Document console and review content of AWS-StartSSHSession document. Note that Session Type is Port and Default Port provided is 22.</description>
+    </item>
+    
+    <item>
+      <title>5. AWS Systems Manager: Patch Manager</title>
+      <link>/workshops/module2/patch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/workshops/module2/patch/</guid>
+      <description>Patch Management with AWS Systems Manager  KEY CONCEPT: Systems Manager - Patch Manager AWS Systems Manager Patch Manager automates the process of patching managed instances with security related updates.
+For Linux-based instances, you can also install patches for non-security updates.
+ You can patch fleets of Amazon EC2 instances and/or your on-premises servers and virtual machines (VMs) by Operating System type. This includes supported versions of Windows, Ubuntu Server, Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), Oracle Linux, CentOS, Debian, Raspbian, Amazon Linux and Amazon Linux 2.</description>
+    </item>
+    
+    <item>
+      <title>6. Enable RDP Through Session Manager</title>
+      <link>/workshops/module1/rdp/</link>
+      <pubDate>Mon, 18 Nov 2019 17:11:28 +1100</pubDate>
+      
+      <guid>/workshops/module1/rdp/</guid>
+      <description>You can tunnel Remote Desktop Protocol (RDP) using Port Forwarding feature of Session Manager to get access to remote Windows instance. This can be achieved without opening inbound port 3389 (default RDP port) on remote instance.
+You will require AWS CLI and RDP client installed on your local machine for this step and adequate access over the Internet. If you do not have required access, you may choose to skip this step.</description>
+    </item>
+    
+    <item>
+      <title>6. AWS Config Lab Setup</title>
+      <link>/workshops/module2/configlabsetup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/workshops/module2/configlabsetup/</guid>
+      <description>Create a Trail in CloudTrail    Open the CloudTrail service console.
+  Click on Trails in the navigation menu on the left.
+  Click on the Create Trail button, to create a trail for this lab.   Apply the following settings and create the trail
+ Trail name: management-tools-workshop Apply trail to all regions: Yes Read/Write Events: All  Data Events:  Check the box next to Select all S3 Buckets in your account   Create a new S3 Bucket:Yes   S3 bucket: security-workshop-(today&amp;rsquo;s date)-(yourmobilenumber)- Example: security-workshop-10062020-123456789.</description>
+    </item>
+    
+    <item>
+      <title>7. AWS Config: Compliance as Code</title>
+      <link>/workshops/module2/config/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/workshops/module2/config/</guid>
+      <description>Create a Config Rule to alert on whether the SSM Agent is working In this step we will add a config rule to our environment using an AWS Managed rule that will evaluate if EC2 instances in the account have a working AWS Systems Manager Agent.
+ Open the AWS Config console. Click on Rules in the navigation menu at the left of the console. Click on the Add rule button:  On the Add Rule screen type ec2-instance-managed-by-systems-manager in the Find by rule name search field.</description>
+    </item>
+    
+  </channel>
+</rss>

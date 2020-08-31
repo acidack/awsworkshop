@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lab 3: Protecting Workloads from the Instance to the Edge on AWS Cloud Security Virtual Event</title>
+    <link>/workshops/module3/</link>
+    <description>Recent content in Lab 3: Protecting Workloads from the Instance to the Edge on AWS Cloud Security Virtual Event</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 18 Nov 2019 08:23:04 +1100</lastBuildDate>
+    
+	<atom:link href="/workshops/module3/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>1. Scenario</title>
+      <link>/workshops/module3/scenario/</link>
+      <pubDate>Mon, 18 Nov 2019 17:11:28 +1100</pubDate>
+      
+      <guid>/workshops/module3/scenario/</guid>
+      <description>Overview In this workshop, you will have an environment provisioned consisting of two Amazon Linux web servers behind an application load balancer. The web servers will be running a PHP web site that contains several vulnerabilities. You will then use AWS Web Application Firewall (WAF), Amazon Inspector and AWS Systems Manager to identify the vulnerabilities and remediate them.
+Scenario Welcome to Widgets LLC! You have just joined the team and your first task is to enhance security for the company website.</description>
+    </item>
+    
+    <item>
+      <title>2. Perimeter Layer - Assess</title>
+      <link>/workshops/module3/perimeter-assess/</link>
+      <pubDate>Mon, 18 Nov 2019 17:11:28 +1100</pubDate>
+      
+      <guid>/workshops/module3/perimeter-assess/</guid>
+      <description>Environment Setup   Click here if you&amp;#39;re not at an AWS event or are using your own account   In order to complete these workshops, you&amp;rsquo;ll need a valid, usable AWS Account. Use a personal account or create a new AWS account to ensure you have the necessary access and that you do not accidentally modify corporate resources. Do not use an AWS account from the company you work for.</description>
+    </item>
+    
+    <item>
+      <title>3. Perimeter Layer - Remediate</title>
+      <link>/workshops/module3/perimeter-remediate/</link>
+      <pubDate>Mon, 18 Nov 2019 17:11:28 +1100</pubDate>
+      
+      <guid>/workshops/module3/perimeter-remediate/</guid>
+      <description>Mitigating Common Web Application Attack Vectors Using AWS WAF In the previous Build Phase, you identified several vulnerabilities in your web application. You are now going to design and implement an AWS WAF ruleset to help mitigate these vulnerabilities. In this section you will do the following tasks:
+ Identify the WAF ACL for your site AWS WAF Rule design and considerations Console Walkthrough - Creating a Rule WAF Rule Creation and Solutions  Please ensure you are using the improved AWS WAF console and API experience for this workshop.</description>
+    </item>
+    
+    <item>
+      <title>4. Perimeter Layer - Verify</title>
+      <link>/workshops/module3/perimeter-verify/</link>
+      <pubDate>Mon, 18 Nov 2019 17:11:28 +1100</pubDate>
+      
+      <guid>/workshops/module3/perimeter-verify/</guid>
+      <description>Mitigating Common Web Application Attack Vectors Using AWS WAF In the previous remediation phase, you implemented an AWS WAF ruleset to protect your site from common attack vectors. You are now going to reassess the posture of the site to confirm the rules are performing as intended and blocking the simulated malicious requests.
+ Confirm malicious requests are blocked by WAF policy Implement WAF monitoring dashboard using Amazon CloudWatch (Optional)  Confirm malicious requests are blocked by WAF policy If needed, start a Session Manager connection to your Red Team Host, the scanner script can be invoked by typing the following command:</description>
+    </item>
+    
+    <item>
+      <title>5. Host Layer - Assess</title>
+      <link>/workshops/module3/host-assess/</link>
+      <pubDate>Mon, 18 Nov 2019 17:11:28 +1100</pubDate>
+      
+      <guid>/workshops/module3/host-assess/</guid>
+      <description>Identifying and Remediating Host Vulnerabilities - Host Layer Round In the previous phase, CloudFormation deployed a stack containing some Amazon EC2 instances behind an application load balancer. You are now going to learn about AWS Inspector. AWS Inspector assesses the instances and identifies security findings that you will later remediate.
+Explore Amazon Inspector You are now going to learn about AWS Inspector terms and explore the Inspector console.
+Understanding Amazon Inspector targets   Go to the Amazon Inspector console.</description>
+    </item>
+    
+    <item>
+      <title>6. Host Layer - Remediate</title>
+      <link>/workshops/module3/host-remediate/</link>
+      <pubDate>Mon, 18 Nov 2019 17:11:28 +1100</pubDate>
+      
+      <guid>/workshops/module3/host-remediate/</guid>
+      <description>Identifying and Remediating Host Vulnerabilities - Host Layer Round In the previous Assess Phase, you installed Amazon Inspector on the instances that were launched as a result of the CloudFormation stack. You will now use AWS Systems Manager Patch Manager to apply patches. You will use tags to select the instances as well.
+In this section you will do the following tasks:
+ Use AWS Systems Manager Patch Manager to set up patching Use AWS Systems Manager Run Command to check the status of the patching  Use AWS Systems Manager Patch Manager   Go to the Systems Manager console and select Patch Manager from the menu on the left.</description>
+    </item>
+    
+    <item>
+      <title>7. Host Layer - Verify</title>
+      <link>/workshops/module3/host-verify/</link>
+      <pubDate>Mon, 18 Nov 2019 17:11:28 +1100</pubDate>
+      
+      <guid>/workshops/module3/host-verify/</guid>
+      <description>Identifying and Remediating Host Vulnerabilities - Host Layer Round - Verify Phase Now that you have remediated the environment, you will again use Amazon Inspector to assess the environment again to see how the patching affected the overall security posture of the environment. You will first run an Inspector assessment. While the assessment is running, you will explore some other AWS capabilities. Lastly, you will return to Inspector to see the results of the new assessment to the effects of the patching that you did with Systems Manager Patch Manager.</description>
+    </item>
+    
+  </channel>
+</rss>

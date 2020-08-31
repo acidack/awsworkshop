@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2019-11-18T17:11:28+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/workshops/module1/scenario/</loc>
+    <lastmod>2019-11-18T17:11:06+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/workshops/module3/scenario/</loc>
+    <lastmod>2019-11-18T17:11:28+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/agenda/</loc>
+  </url>
+  
+  <url>
+    <loc>/workshops/module3/perimeter-assess/</loc>
+    <lastmod>2019-11-18T17:11:28+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/workshops/</loc>
+    <lastmod>2019-11-18T08:29:21+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/workshops/module3/perimeter-remediate/</loc>
+    <lastmod>2019-11-18T17:11:28+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/ondemandtracks/</loc>
+  </url>
+  
+  <url>
+    <loc>/workshops/module4/scenario/</loc>
+    <lastmod>2019-11-18T17:11:28+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/workshops/module3/perimeter-verify/</loc>
+    <lastmod>2019-11-18T17:11:28+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/workshops/module4/rds/</loc>
+    <lastmod>2019-11-18T17:11:28+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/workshops/module3/host-assess/</loc>
+    <lastmod>2019-11-18T17:11:28+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/workshops/module3/host-remediate/</loc>
+    <lastmod>2019-11-18T17:11:28+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/workshops/module4/fargate/</loc>
+    <lastmod>2019-11-18T17:11:28+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/workshops/module3/host-verify/</loc>
+    <lastmod>2019-11-18T17:11:28+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/workshops/module1/evaluate/</loc>
+    <lastmod>2019-11-18T17:11:28+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/workshops/module0/</loc>
+    <lastmod>2019-11-18T08:26:11+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/workshops/module2/sysmgrlabsetup/</loc>
+  </url>
+  
+  <url>
+    <loc>/workshops/module1/configure/</loc>
+    <lastmod>2019-11-18T17:11:28+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/workshops/module2/systemsmanager/</loc>
+  </url>
+  
+  <url>
+    <loc>/workshops/module2/inventory/</loc>
+  </url>
+  
+  <url>
+    <loc>/workshops/module1/portforward/</loc>
+    <lastmod>2019-11-18T17:11:28+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/workshops/module2/statemgr/</loc>
+  </url>
+  
+  <url>
+    <loc>/workshops/module1/ssh/</loc>
+    <lastmod>2019-11-18T17:11:28+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/workshops/module2/patch/</loc>
+  </url>
+  
+  <url>
+    <loc>/workshops/module1/rdp/</loc>
+    <lastmod>2019-11-18T17:11:28+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/workshops/module2/configlabsetup/</loc>
+  </url>
+  
+  <url>
+    <loc>/workshops/module2/config/</loc>
+  </url>
+  
+  <url>
+    <loc>/workshops/module1/</loc>
+    <lastmod>2019-11-18T08:23:04+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/workshops/module2/</loc>
+    <lastmod>2019-11-18T08:23:04+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/workshops/module3/</loc>
+    <lastmod>2019-11-18T08:23:04+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/workshops/module4/</loc>
+    <lastmod>2019-11-18T08:23:04+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/training/</loc>
+    <lastmod>2019-11-18T08:29:21+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/links/</loc>
+    <lastmod>2019-11-18T08:29:21+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/survey/</loc>
+    <lastmod>2019-11-18T08:29:21+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/faq/</loc>
+    <lastmod>2019-11-18T08:29:21+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/ondemandtracks/advanced_container_security/</loc>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>/ondemandtracks/cloud_security_multi_account/</loc>
+  </url>
+  
+  <url>
+    <loc>/ondemandtracks/cloud-enabled_security_origin/</loc>
+  </url>
+  
+  <url>
+    <loc>/ondemandtracks/federated_access_made_simple/</loc>
+  </url>
+  
+  <url>
+    <loc>/ondemandtracks/secure_real-time_tracking_afl/</loc>
+  </url>
+  
+  <url>
+    <loc>/ondemandtracks/secops_in_your_organization/</loc>
+  </url>
+  
+  <url>
+    <loc>/ondemandtracks/neoband_in_th_cloud_xinja/</loc>
+  </url>
+  
+  <url>
+    <loc>/ondemandtracks/iam-best-practices/</loc>
+  </url>
+  
+  <url>
+    <loc>/ondemandtracks/intro-to-aws-sec/</loc>
+  </url>
+  
+  <url>
+    <loc>/ondemandtracks/sec-best-practices-war-way/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+  </url>
+  
+  <url>
+    <loc>/ondemandtracks/security_fundamentals/</loc>
+  </url>
+  
+</urlset>

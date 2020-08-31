@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lab 2: Security through Good Governance on AWS Cloud Security Virtual Event</title>
+    <link>/workshops/module2/</link>
+    <description>Recent content in Lab 2: Security through Good Governance on AWS Cloud Security Virtual Event</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 18 Nov 2019 08:23:04 +1100</lastBuildDate>
+    
+	<atom:link href="/workshops/module2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>1. AWS Systems Manager Lab Setup</title>
+      <link>/workshops/module2/sysmgrlabsetup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/workshops/module2/sysmgrlabsetup/</guid>
+      <description>Lab Setup In this part of the lab you will set up the necessary resources in your environment to proceed with the Systems Manager labs.
+Create an EC2 Key Pair   Use your administrator account to access the Amazon EC2 console at https://console.aws.amazon.com/ec2/.
+In 2019 the EC2 console was updated to have a consistent look and feel with other AWS Services, and to improve the user experience. This lab guide shows the new and improved console experience.</description>
+    </item>
+    
+    <item>
+      <title>2. AWS Systems Manager: Operations as Code</title>
+      <link>/workshops/module2/systemsmanager/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/workshops/module2/systemsmanager/</guid>
+      <description>Operations as Code with Systems Manager  In a traditional environment you would have to set up the systems and software to perform administration activities. You would require a server to execute your scripts. You would need to manage authentication credentials across all of your systems.
+Operations as code reduces the resources, time, risk, and complexity of performing operations tasks and ensures consistent execution. You can take operations as code and automate operations activities by using scheduling and event triggers.</description>
+    </item>
+    
+    <item>
+      <title>3. AWS Systems Manager: Inventory</title>
+      <link>/workshops/module2/inventory/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/workshops/module2/inventory/</guid>
+      <description>Inventory with Systems Manager   If you are using an AWS Event Engine account you might see an error at the top of your screen when accessing features with resource group integration. These errors can safely be ignored, they will not impact your ability to perform any of the steps in the lab.
+  KEY CONCEPT: AWS Systems Manager - Inventory AWS Systems Manager collects information about your instances and the software installed on them, helping you to understand your system configurations and installed applications.</description>
+    </item>
+    
+    <item>
+      <title>4. AWS Systems Manager: State Manager</title>
+      <link>/workshops/module2/statemgr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/workshops/module2/statemgr/</guid>
+      <description>State Manager with Systems Manager  KEY CONCEPT: AWS Systems Manager - State Manager In State Manager, an association is the result of binding configuration information that defines the state you want your instances to be in to the instances themselves. This information specifies when and how you want instance-related operations to run that ensure your Amazon EC2 and hybrid infrastructure is in an intended or consistent state.
+An association defines the state you want to apply to a set of targets.</description>
+    </item>
+    
+    <item>
+      <title>5. AWS Systems Manager: Patch Manager</title>
+      <link>/workshops/module2/patch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/workshops/module2/patch/</guid>
+      <description>Patch Management with AWS Systems Manager  KEY CONCEPT: Systems Manager - Patch Manager AWS Systems Manager Patch Manager automates the process of patching managed instances with security related updates.
+For Linux-based instances, you can also install patches for non-security updates.
+ You can patch fleets of Amazon EC2 instances and/or your on-premises servers and virtual machines (VMs) by Operating System type. This includes supported versions of Windows, Ubuntu Server, Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), Oracle Linux, CentOS, Debian, Raspbian, Amazon Linux and Amazon Linux 2.</description>
+    </item>
+    
+    <item>
+      <title>6. AWS Config Lab Setup</title>
+      <link>/workshops/module2/configlabsetup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/workshops/module2/configlabsetup/</guid>
+      <description>Create a Trail in CloudTrail    Open the CloudTrail service console.
+  Click on Trails in the navigation menu on the left.
+  Click on the Create Trail button, to create a trail for this lab.   Apply the following settings and create the trail
+ Trail name: management-tools-workshop Apply trail to all regions: Yes Read/Write Events: All  Data Events:  Check the box next to Select all S3 Buckets in your account   Create a new S3 Bucket:Yes   S3 bucket: security-workshop-(today&amp;rsquo;s date)-(yourmobilenumber)- Example: security-workshop-10062020-123456789.</description>
+    </item>
+    
+    <item>
+      <title>7. AWS Config: Compliance as Code</title>
+      <link>/workshops/module2/config/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/workshops/module2/config/</guid>
+      <description>Create a Config Rule to alert on whether the SSM Agent is working In this step we will add a config rule to our environment using an AWS Managed rule that will evaluate if EC2 instances in the account have a working AWS Systems Manager Agent.
+ Open the AWS Config console. Click on Rules in the navigation menu at the left of the console. Click on the Add rule button:  On the Add Rule screen type ec2-instance-managed-by-systems-manager in the Find by rule name search field.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lab 4: AWS Secrets Manager with Amazon RDS and AWS Fargate on AWS Cloud Security Virtual Event</title>
+    <link>/workshops/module4/</link>
+    <description>Recent content in Lab 4: AWS Secrets Manager with Amazon RDS and AWS Fargate on AWS Cloud Security Virtual Event</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 18 Nov 2019 08:23:04 +1100</lastBuildDate>
+    
+	<atom:link href="/workshops/module4/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>1. Architecture</title>
+      <link>/workshops/module4/scenario/</link>
+      <pubDate>Mon, 18 Nov 2019 17:11:28 +1100</pubDate>
+      
+      <guid>/workshops/module4/scenario/</guid>
+      <description>Workshop architecture This environment consists of a VPC with two subnets. The subnets contains an Amazon EC2 bastion host running Amazon Linux 2 used for running AWS CLI commands and a private, not publicly-accessible, Amazon RDS MySQL database instance. The subnets are chosen based on the availability of an interface VPC endpoint for AWS Secrets Manager. The VPC also contains an AWS Fargate container running the Amazon Linux 2 operating system.</description>
+    </item>
+    
+    <item>
+      <title>2. RDS with Secrets Manager</title>
+      <link>/workshops/module4/rds/</link>
+      <pubDate>Mon, 18 Nov 2019 17:11:28 +1100</pubDate>
+      
+      <guid>/workshops/module4/rds/</guid>
+      <description>Overview In this phase, you will learn how to use AWS Secrets Manager for rotating the password for a private Amazon RDS database. As a reminder, the environment provisioned by CloudFormation is shown in the figure below. You will not be working with the AWS Fargate container in this phase so it is not shown below.
+Important For the sake of simplicity, this tutorial uses jq to parse the secret value into environment variables to allow for easy command line manipulation.</description>
+    </item>
+    
+    <item>
+      <title>3. Fargate with Secrets Manager</title>
+      <link>/workshops/module4/fargate/</link>
+      <pubDate>Mon, 18 Nov 2019 17:11:28 +1100</pubDate>
+      
+      <guid>/workshops/module4/fargate/</guid>
+      <description>Prerequisites  You must complete the RDS phase of this builder session before starting this phase. You should be familiar with Docker concepts.  Overview In this phase, you will learn how to use AWS Secrets Manager with AWS Fargate. AWS Fargate is a compute engine for Amazon Elastic Container Service that allows you to run containers without having to manage servers or clusters. With AWS Fargate, you no longer have to provision, configure, and scale clusters of virtual machines to run containers.</description>
+    </item>
+    
+  </channel>
+</rss>

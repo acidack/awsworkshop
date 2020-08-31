@@ -1,0 +1,2296 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.74.3" />
+    <meta name="description" content="AWS Cloud Security Virtual Event">
+<meta name="author" content="Sumit Patel">
+
+    <link rel="shortcut icon" href="https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico" type="image/ico" />
+<link rel="icon" href="https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico" type="image/ico" />
+
+    <title>3. Fargate with Secrets Manager :: AWS Cloud Security Virtual Event</title>
+
+    
+    <link href="/css/nucleus.css" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css" rel="stylesheet">
+    <link href="/css/hybrid.css" rel="stylesheet">
+    <link href="/css/featherlight.min.css" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css" rel="stylesheet">
+    <link href="/css/auto-complete.css" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css" rel="stylesheet">
+    <link href="/css/theme.css" rel="stylesheet">
+    <link href="/css/hugo-theme.css" rel="stylesheet">
+    
+    <link href="/css/theme-workshops.css" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery-3.3.1.min.js"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/workshops/module4/fargate/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <div>
+  <a href="/" title="Go home">
+      <img style="vertical-align:middle" src="/images/logo.png" height="70px" />
+  </a>
+</div>
+
+    </div>
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/agenda/" title="Overview" class="dd-item
+    
+        
+        ">
+      <a href="/agenda/">
+          Overview
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/workshops/" title="Workshops" class="dd-item
+    parent
+        
+        ">
+      <a href="/workshops/">
+          Workshops
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/workshops/module0/" title="Lab Setup" class="dd-item
+    
+        
+        ">
+      <a href="/workshops/module0/">
+          Lab Setup
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/workshops/module1/" title="Lab 1: Eliminate Bastion Hosts with Systems Manager" class="dd-item
+    
+        
+        ">
+      <a href="/workshops/module1/">
+          Lab 1: Eliminate Bastion Hosts with Systems Manager
+          
+            
+              <i class="fas fa-caret-right"></i>
+            
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/workshops/module1/scenario/" title="1. Overview and Setup" class="dd-item ">
+        <a href="/workshops/module1/scenario/">
+        1. Overview and Setup
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/workshops/module1/evaluate/" title="2. Evaluate Session Manager Configuration" class="dd-item ">
+        <a href="/workshops/module1/evaluate/">
+        2. Evaluate Session Manager Configuration
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/workshops/module1/configure/" title="3. Configure Systems Manager Session Manager" class="dd-item ">
+        <a href="/workshops/module1/configure/">
+        3. Configure Systems Manager Session Manager
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/workshops/module1/portforward/" title="4. Use Port Forwarding For Web Redirection" class="dd-item ">
+        <a href="/workshops/module1/portforward/">
+        4. Use Port Forwarding For Web Redirection
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/workshops/module1/ssh/" title="5. Enable SSH Through Session Manager" class="dd-item ">
+        <a href="/workshops/module1/ssh/">
+        5. Enable SSH Through Session Manager
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/workshops/module1/rdp/" title="6. Enable RDP Through Session Manager" class="dd-item ">
+        <a href="/workshops/module1/rdp/">
+        6. Enable RDP Through Session Manager
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/workshops/module2/" title="Lab 2: Security through Good Governance" class="dd-item
+    
+        
+        ">
+      <a href="/workshops/module2/">
+          Lab 2: Security through Good Governance
+          
+            
+              <i class="fas fa-caret-right"></i>
+            
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/workshops/module2/sysmgrlabsetup/" title="1. AWS Systems Manager Lab Setup" class="dd-item ">
+        <a href="/workshops/module2/sysmgrlabsetup/">
+        1. AWS Systems Manager Lab Setup
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/workshops/module2/systemsmanager/" title="2. AWS Systems Manager: Operations as Code" class="dd-item ">
+        <a href="/workshops/module2/systemsmanager/">
+        2. AWS Systems Manager: Operations as Code
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/workshops/module2/inventory/" title="3. AWS Systems Manager: Inventory" class="dd-item ">
+        <a href="/workshops/module2/inventory/">
+        3. AWS Systems Manager: Inventory
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/workshops/module2/statemgr/" title="4. AWS Systems Manager: State Manager" class="dd-item ">
+        <a href="/workshops/module2/statemgr/">
+        4. AWS Systems Manager: State Manager
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/workshops/module2/patch/" title="5. AWS Systems Manager: Patch Manager" class="dd-item ">
+        <a href="/workshops/module2/patch/">
+        5. AWS Systems Manager: Patch Manager
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/workshops/module2/configlabsetup/" title="6. AWS Config Lab Setup" class="dd-item ">
+        <a href="/workshops/module2/configlabsetup/">
+        6. AWS Config Lab Setup
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/workshops/module2/config/" title="7. AWS Config: Compliance as Code" class="dd-item ">
+        <a href="/workshops/module2/config/">
+        7. AWS Config: Compliance as Code
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/workshops/module3/" title="Lab 3: Protecting Workloads from the Instance to the Edge" class="dd-item
+    
+        
+        ">
+      <a href="/workshops/module3/">
+          Lab 3: Protecting Workloads from the Instance to the Edge
+          
+            
+              <i class="fas fa-caret-right"></i>
+            
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/workshops/module3/scenario/" title="1. Scenario" class="dd-item ">
+        <a href="/workshops/module3/scenario/">
+        1. Scenario
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/workshops/module3/perimeter-assess/" title="2. Perimeter Layer - Assess" class="dd-item ">
+        <a href="/workshops/module3/perimeter-assess/">
+        2. Perimeter Layer - Assess
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/workshops/module3/perimeter-remediate/" title="3. Perimeter Layer - Remediate" class="dd-item ">
+        <a href="/workshops/module3/perimeter-remediate/">
+        3. Perimeter Layer - Remediate
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/workshops/module3/perimeter-verify/" title="4. Perimeter Layer - Verify" class="dd-item ">
+        <a href="/workshops/module3/perimeter-verify/">
+        4. Perimeter Layer - Verify
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/workshops/module3/host-assess/" title="5. Host Layer - Assess" class="dd-item ">
+        <a href="/workshops/module3/host-assess/">
+        5. Host Layer - Assess
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/workshops/module3/host-remediate/" title="6. Host Layer - Remediate" class="dd-item ">
+        <a href="/workshops/module3/host-remediate/">
+        6. Host Layer - Remediate
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/workshops/module3/host-verify/" title="7. Host Layer - Verify" class="dd-item ">
+        <a href="/workshops/module3/host-verify/">
+        7. Host Layer - Verify
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/workshops/module4/" title="Lab 4: AWS Secrets Manager with Amazon RDS and AWS Fargate" class="dd-item
+    parent
+        
+        ">
+      <a href="/workshops/module4/">
+          Lab 4: AWS Secrets Manager with Amazon RDS and AWS Fargate
+          
+            
+              <i class="fas fa-caret-down"></i>
+            
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/workshops/module4/scenario/" title="1. Architecture" class="dd-item ">
+        <a href="/workshops/module4/scenario/">
+        1. Architecture
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/workshops/module4/rds/" title="2. RDS with Secrets Manager" class="dd-item ">
+        <a href="/workshops/module4/rds/">
+        2. RDS with Secrets Manager
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/workshops/module4/fargate/" title="3. Fargate with Secrets Manager" class="dd-item active">
+        <a href="/workshops/module4/fargate/">
+        3. Fargate with Secrets Manager
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/ondemandtracks/" title="On-Demand Tracks" class="dd-item
+    
+        
+        ">
+      <a href="/ondemandtracks/">
+          On-Demand Tracks
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/ondemandtracks/advanced_container_security/" title="Advanced container security" class="dd-item
+    
+        
+        ">
+      <a href="/ondemandtracks/advanced_container_security/">
+          Advanced container security
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/ondemandtracks/cloud_security_multi_account/" title="Cloud security for everyone: Multi-account strategy" class="dd-item
+    
+        
+        ">
+      <a href="/ondemandtracks/cloud_security_multi_account/">
+          Cloud security for everyone: Multi-account strategy
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/ondemandtracks/cloud-enabled_security_origin/" title="Cloud-enabled security evolution with Origin Energy" class="dd-item
+    
+        
+        ">
+      <a href="/ondemandtracks/cloud-enabled_security_origin/">
+          Cloud-enabled security evolution with Origin Energy
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/ondemandtracks/federated_access_made_simple/" title="Federated access and authorisation made simple" class="dd-item
+    
+        
+        ">
+      <a href="/ondemandtracks/federated_access_made_simple/">
+          Federated access and authorisation made simple
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/ondemandtracks/secure_real-time_tracking_afl/" title="How AFL secures real-time player tracking with encryption" class="dd-item
+    
+        
+        ">
+      <a href="/ondemandtracks/secure_real-time_tracking_afl/">
+          How AFL secures real-time player tracking with encryption
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/ondemandtracks/secops_in_your_organization/" title="How to put SecOps to work in your organisation" class="dd-item
+    
+        
+        ">
+      <a href="/ondemandtracks/secops_in_your_organization/">
+          How to put SecOps to work in your organisation
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/ondemandtracks/neoband_in_th_cloud_xinja/" title="How Xinja built a neobank on the cloud" class="dd-item
+    
+        
+        ">
+      <a href="/ondemandtracks/neoband_in_th_cloud_xinja/">
+          How Xinja built a neobank on the cloud
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/ondemandtracks/iam-best-practices/" title="IAM: Best practices for managing identity with AWS" class="dd-item
+    
+        
+        ">
+      <a href="/ondemandtracks/iam-best-practices/">
+          IAM: Best practices for managing identity with AWS
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/ondemandtracks/intro-to-aws-sec/" title="Introduction to AWS Security" class="dd-item
+    
+        
+        ">
+      <a href="/ondemandtracks/intro-to-aws-sec/">
+          Introduction to AWS Security
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/ondemandtracks/sec-best-practices-war-way/" title="Security best practices: The Well-Architected way" class="dd-item
+    
+        
+        ">
+      <a href="/ondemandtracks/sec-best-practices-war-way/">
+          Security best practices: The Well-Architected way
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/ondemandtracks/security_fundamentals/" title="The fundamentals of AWS Security" class="dd-item
+    
+        
+        ">
+      <a href="/ondemandtracks/security_fundamentals/">
+          The fundamentals of AWS Security
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/training/" title="Learning Resources" class="dd-item
+    
+        
+        ">
+      <a href="/training/">
+          Learning Resources
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/links/" title="Additional Links" class="dd-item
+    
+        
+        ">
+      <a href="/links/">
+          Additional Links
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/survey/" title="Survey" class="dd-item
+    
+        
+        ">
+      <a href="/survey/">
+          Survey
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/faq/" title="FAQ" class="dd-item
+    
+        
+        ">
+      <a href="/faq/">
+          FAQ
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Clear History</a></li>
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <left>
+
+    <h5 class="copyright">&copy; 2020 Amazon Web Services, Inc. or its Affiliates. All rights reserved.<h5>
+
+</left>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>AWS Cloud Security Virtual Event</a> > <a href='/workshops/'>Workshops</a> > <a href='/workshops/module4/'>Lab 4: AWS Secrets Manager with Amazon RDS and AWS Fargate</a> > 3. Fargate with Secrets Manager
+          
+        
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#prerequisites">Prerequisites</a></li>
+    <li><a href="#overview">Overview</a>
+      <ul>
+        <li><a href="#build-and-push-the-docker-image">Build and push the Docker image</a></li>
+        <li><a href="#configure-and-launch-aws-fargate">Configure and launch AWS Fargate</a></li>
+        <li><a href="#connect-to-the-aws-fargate-container">Connect to the AWS Fargate container</a></li>
+        <li><a href="#access-the-database">Access the database</a></li>
+        <li><a href="#examine-the-flow-of-the-secret">Examine the flow of the secret</a></li>
+      </ul>
+    </li>
+    <li><a href="#summary">Summary</a>
+      <ul>
+        <li><a href="#stuck-watch-this"><em>Stuck? Watch this</em></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              3. Fargate with Secrets Manager
+            </h1>
+          
+
+        
+
+
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>You must complete the RDS phase of this builder session before starting this phase.</li>
+<li>You should be familiar with Docker concepts.</li>
+</ul>
+<h2 id="overview">Overview</h2>
+<p>In this phase, you will learn how to use AWS Secrets Manager with AWS Fargate. AWS Fargate is a compute engine for Amazon Elastic Container Service that allows you to run containers without having to manage servers or clusters. With AWS Fargate, you no longer have to provision, configure, and scale clusters of virtual machines to run containers. This removes the need to choose server types, decide when to scale your clusters, or optimize cluster packing. AWS Fargate removes the need for you to interact with or think about servers or clusters. Fargate lets you focus on designing and building your applications instead of managing the infrastructure that runs them.</p>
+<p>The CloudFormation template for this workshop round created a Dockerfile and some helper shell scripts. You will use these shell scripts to build the Docker image and push it to Amazon Elastic Container Registry (ECR), a fully-managed Docker container registry. This guide does not go into the details of these scripts. You are encouraged to read them to learn what they do to gain a better understanding of Docker, Amazon ECR, and AWS Fargate.</p>
+<p>Lastly as a reminder, the environment provisioned by CloudFormation is shown in the figure below</p>
+<p><img src="/images/fargate-1.png" alt=""></p>
+<h3 id="build-and-push-the-docker-image">Build and push the Docker image</h3>
+<ul>
+<li>If you are do not have a session open to the bastion host, then connect to the bastion host using AWS Systems Manager Session Manager. To do this:
+<ul>
+<li>Go to the <a href="https://console.aws.amazon.com/systems-manager">Systems Manager console</a>.</li>
+<li>Click <em><strong>Session Manager</strong></em>.</li>
+<li>Click <em><strong>Start session</strong></em>.</li>
+<li>Select the radio button for the instance called <strong>smdemo-host</strong>.</li>
+<li>Click <em><strong>Start session</strong></em>.</li>
+</ul>
+</li>
+<li>The scripts you will be using are owned by the ec2-user account. If you are not currently using ec2-user as your effective user id, then enter the command below to change your effective user id and directory to those of ec2-user:
+<pre><code>sudo su - ec2-user
+</code></pre></li>
+<li>Run this script to build the Docker image:
+<pre><code>./dockerbuild.sh
+</code></pre><p>This command creates the Docker image based on the Dockerfile that was generated by CloudFormation. The build process can take a few minutes to complete. Wait until the shell prompts you for another command before continuing.</p>
+</li>
+<li>Confirm that the image was built by using this command:
+<pre><code>docker images
+</code></pre><p>You should see a repository whose name contans -ecrre- that was recently built.</p>
+</li>
+<li>Run the following script to push the image to Amazon ECR to make the image available to AWS Fargate:
+<pre><code>./dockertagandpush.sh
+</code></pre><p>This script will take a few minutes to complete. Wait until the shell prompt appears before continuing.</p>
+</li>
+</ul>
+<p>You have now built the Docker image and pushed it to Amazon ECR. You will now configure AWS Fargate.</p>
+<h3 id="configure-and-launch-aws-fargate">Configure and launch AWS Fargate</h3>
+<p>You will now configure the Amazon Elastic Container Service Task Definition that AWS Fargate will use to launch the task. After you confgure the task definition, you will launch the AWS Fargate task.</p>
+<ul>
+<li>Go to the <a href="https://console.aws.amazon.com/ecs">ECS console</a> and select the <em><strong>Clusters</strong></em> menu item. You should see a cluster whose name begins with the stack name you chose and contains the string -ECSCluster-. The cluster description should look similar to that shown in the figure below.
+<img src="/images/fargate-sec-1.png" alt=""></li>
+<li>Click the Task Definitions menu item. You should see a task definition whose name contains -TaskDefinition- as shown below.
+<img src="/images/fargate-sec-2.png" alt=""></li>
+<li>Click the check box next to the appropriate task definition name and then <em><strong>click Create new revision</strong></em>.</li>
+<li>Leave all of the current values in place. Scroll down and <em><strong>click Configure via JSON</strong></em>.</li>
+<li>Look for the list named secrets. It should look similar to what is shown in the figure below.
+<img src="/images/fargate-sec-3.png" alt="">
+Replace <strong>SECRETNAME</strong> with the name of the secret you stored in the RDS phase which should be <strong>smdemo</strong>.</li>
+<li>Click <em><strong>Save</strong></em> to save the revised JSON definition.</li>
+<li>Click <em><strong>Create</strong></em> to create the new revision of the Task Definition that includes the JSON revisions.</li>
+<li>You will see a message saying that the new revision has been created. Notice that the revision has a version number attached to it as shown in the figure below.
+<img src="/images/fargate-sec-4.png" alt=""></li>
+<li>Click the <em><strong>Actions</strong></em> button and select <em><strong>Run Task</strong></em> from the dropdown menu.
+Choose the values listed in the table below.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Launch type</td>
+<td>Fargate</td>
+</tr>
+<tr>
+<td>Cluster VPC</td>
+<td>The VPC that was created by CloudFormation with the 10.200.0.0/16 CIDR</td>
+</tr>
+<tr>
+<td>Subnets</td>
+<td>Select all of the subnets listed</td>
+</tr>
+<tr>
+<td>Security group</td>
+<td>Select the group whose name includes BastionSG</td>
+</tr>
+</tbody>
+</table>
+<p>Leave all other values at their current settings.</p>
+<ul>
+<li><em><strong>Click Run Task</strong></em> .
+Refresh the Task window at the bottom to update the status. The status will start at PROVISIONING, then change to PENDING, and then to RUNNING*.</li>
+</ul>
+<p>Now that you have launched the Fargate task, you are ready to connect to the container.</p>
+<h3 id="connect-to-the-aws-fargate-container">Connect to the AWS Fargate container</h3>
+<ul>
+<li>Click on the task name to display details of the task and note the private IP associated with the task. The private IP should begin with 10.200. The third octet should be either 11 or 12. This private IP of the Fargate task has been connected to your VPC.</li>
+<li>From the Systems Manager Session Manager session you started above, while sudo&rsquo;d as ec2-user, enter the following command:
+<pre><code>ssh PrvateIpOfFargateTask
+</code></pre><p>Replace PrivateIPOfFargateTask with the private IP of the Fargate task. You will be prompted for the password. Enter the value from the EC2UserPassword output value from the CloudFormation stack. You should now see a shell prompt.</p>
+</li>
+</ul>
+<h3 id="access-the-database">Access the database</h3>
+<p>Now that you have connected to the AWS Fargate container, you can now access the RDS database. After you access the database you will learn how the scripts receive the secret value from the ECS Task Definition.</p>
+<ul>
+<li>Run the command below to access the RDS database. Note that you do not supply the name of a secret since that has been passed in the task definition.
+<pre><code>./mysql.newway.sh
+use smdemo;
+show tables;
+select * from bookinfo;
+quit;
+</code></pre><p>The output should be similar to what you see in the figure below.
+<img src="/images/fargate-sec-5.png" alt=""></p>
+</li>
+</ul>
+<h3 id="examine-the-flow-of-the-secret">Examine the flow of the secret</h3>
+<p>Now that you have been able to access the database through Fargate, it&rsquo;s important to understand how the value made its way from the Task Definition to the mysql.newway.sh script. It&rsquo;s important to understand that there may be multiple ways to accomplish this depending on what is running in the container. Since this container is running a Linux shell, the path the secret value flowed took advantage of the capabilities of the shell.</p>
+<ul>
+<li>
+<p>In the task definition JSON that you modified above, you modified the value of the valueFrom key to be the ARN of the secret that you stored in Secrets Manager. The corresponding name key has as its value the name of an environment variable that will be presented to the Fargate task container when it is instantiated.</p>
+</li>
+<li>
+<p>The Dockerfile that is used to build the Docker image for Fargate has the following as its last line:</p>
+<p>CMD /home/ec2-user/startprocesses.sh</p>
+<p>This means that when Fargate launches the Docker image, the image will run the startproceses.sh file.</p>
+<p>Here are the contents of the main portion of that file:</p>
+<pre><code>touch /etc/profile.d/ecs.sh
+chmod 644 /etc/profile.d/ecs.sh
+
+env | \
+grep &quot;^TASKDEF_&quot; | \
+awk -F= '{printf &quot;export %s=%c%s%c\n&quot;, $1, 39, $2, 39 }' \
+&amp;gt;&amp;gt; /etc/profile.d/ecs.sh
+</code></pre><p>You can see that the startprocesses.sh script creates another script named /etc/profile.d/ecs.sh. Each line in ecs.sh contains the definitions of every environment variable passed to the container whose environment variable names start with TASKDEF_. Since the file exists in the /etc/profile.d directory, each time a user logs in, the ecs.sh file willl be &ldquo;sourced&rdquo; by the shell causing the environment variables to be set for the logged in user.</p>
+</li>
+<li>
+<p>To confirm that the secret value has been passed, enter the following command from the Fargate container shell prompt:</p>
+<pre><code>env|grep TASKDEF_SECRET
+</code></pre><p>You should see a value similar to that in the figure below.
+<img src="/images/fargate-sec-6.png" alt="">
+This shows that the Task Definition properly retrieved the secret information and passed it to the Fargate container which in turn made it available to the login shell.</p>
+</li>
+</ul>
+<h2 id="summary">Summary</h2>
+<p>You have completed ths Fargate phase and have learned how to use AWS Secrets Manager with AWS Fargate.</p>
+<hr>
+<h3 id="stuck-watch-this"><em>Stuck? Watch this</em></h3>
+
+<div class="notices note" ><p><em>This video has no audio</em></p>
+</div>
+
+
+
+<video width="696" height="392" controls>
+  <source src="https://d1tqhetmq9f85b.cloudfront.net/downloads/lab4.3.mp4" type="video/mp4">
+  Your browser doesn't support video.
+</video>
+
+
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/workshops/module4/rds/" title="2. RDS with Secrets Manager"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/ondemandtracks/" title="On-Demand Tracks" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js"></script>
+    <script src="/js/perfect-scrollbar.min.js"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="/js/jquery.sticky.js"></script>
+    <script src="/js/featherlight.min.js"></script>
+    <script src="/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js"></script>
+    <script src="/js/learn.js"></script>
+    <script src="/js/hugo-learn.js"></script>
+
+    <link href="/mermaid/mermaid.css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+

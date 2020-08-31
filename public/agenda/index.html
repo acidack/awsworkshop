@@ -1,0 +1,2221 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.74.3" />
+    <meta name="description" content="AWS Cloud Security Virtual Event">
+<meta name="author" content="Sumit Patel">
+
+    <link rel="shortcut icon" href="https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico" type="image/ico" />
+<link rel="icon" href="https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico" type="image/ico" />
+
+    <title>Overview :: AWS Cloud Security Virtual Event</title>
+
+    
+    <link href="/css/nucleus.css" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css" rel="stylesheet">
+    <link href="/css/hybrid.css" rel="stylesheet">
+    <link href="/css/featherlight.min.css" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css" rel="stylesheet">
+    <link href="/css/auto-complete.css" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css" rel="stylesheet">
+    <link href="/css/theme.css" rel="stylesheet">
+    <link href="/css/hugo-theme.css" rel="stylesheet">
+    
+    <link href="/css/theme-workshops.css" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery-3.3.1.min.js"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/agenda/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <div>
+  <a href="/" title="Go home">
+      <img style="vertical-align:middle" src="/images/logo.png" height="70px" />
+  </a>
+</div>
+
+    </div>
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/agenda/" title="Overview" class="dd-item
+    parent
+        active
+        ">
+      <a href="/agenda/">
+          Overview
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/workshops/" title="Workshops" class="dd-item
+    
+        
+        ">
+      <a href="/workshops/">
+          Workshops
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/workshops/module0/" title="Lab Setup" class="dd-item
+    
+        
+        ">
+      <a href="/workshops/module0/">
+          Lab Setup
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/workshops/module1/" title="Lab 1: Eliminate Bastion Hosts with Systems Manager" class="dd-item
+    
+        
+        ">
+      <a href="/workshops/module1/">
+          Lab 1: Eliminate Bastion Hosts with Systems Manager
+          
+            
+              <i class="fas fa-caret-right"></i>
+            
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/workshops/module1/scenario/" title="1. Overview and Setup" class="dd-item ">
+        <a href="/workshops/module1/scenario/">
+        1. Overview and Setup
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/workshops/module1/evaluate/" title="2. Evaluate Session Manager Configuration" class="dd-item ">
+        <a href="/workshops/module1/evaluate/">
+        2. Evaluate Session Manager Configuration
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/workshops/module1/configure/" title="3. Configure Systems Manager Session Manager" class="dd-item ">
+        <a href="/workshops/module1/configure/">
+        3. Configure Systems Manager Session Manager
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/workshops/module1/portforward/" title="4. Use Port Forwarding For Web Redirection" class="dd-item ">
+        <a href="/workshops/module1/portforward/">
+        4. Use Port Forwarding For Web Redirection
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/workshops/module1/ssh/" title="5. Enable SSH Through Session Manager" class="dd-item ">
+        <a href="/workshops/module1/ssh/">
+        5. Enable SSH Through Session Manager
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/workshops/module1/rdp/" title="6. Enable RDP Through Session Manager" class="dd-item ">
+        <a href="/workshops/module1/rdp/">
+        6. Enable RDP Through Session Manager
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/workshops/module2/" title="Lab 2: Security through Good Governance" class="dd-item
+    
+        
+        ">
+      <a href="/workshops/module2/">
+          Lab 2: Security through Good Governance
+          
+            
+              <i class="fas fa-caret-right"></i>
+            
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/workshops/module2/sysmgrlabsetup/" title="1. AWS Systems Manager Lab Setup" class="dd-item ">
+        <a href="/workshops/module2/sysmgrlabsetup/">
+        1. AWS Systems Manager Lab Setup
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/workshops/module2/systemsmanager/" title="2. AWS Systems Manager: Operations as Code" class="dd-item ">
+        <a href="/workshops/module2/systemsmanager/">
+        2. AWS Systems Manager: Operations as Code
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/workshops/module2/inventory/" title="3. AWS Systems Manager: Inventory" class="dd-item ">
+        <a href="/workshops/module2/inventory/">
+        3. AWS Systems Manager: Inventory
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/workshops/module2/statemgr/" title="4. AWS Systems Manager: State Manager" class="dd-item ">
+        <a href="/workshops/module2/statemgr/">
+        4. AWS Systems Manager: State Manager
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/workshops/module2/patch/" title="5. AWS Systems Manager: Patch Manager" class="dd-item ">
+        <a href="/workshops/module2/patch/">
+        5. AWS Systems Manager: Patch Manager
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/workshops/module2/configlabsetup/" title="6. AWS Config Lab Setup" class="dd-item ">
+        <a href="/workshops/module2/configlabsetup/">
+        6. AWS Config Lab Setup
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/workshops/module2/config/" title="7. AWS Config: Compliance as Code" class="dd-item ">
+        <a href="/workshops/module2/config/">
+        7. AWS Config: Compliance as Code
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/workshops/module3/" title="Lab 3: Protecting Workloads from the Instance to the Edge" class="dd-item
+    
+        
+        ">
+      <a href="/workshops/module3/">
+          Lab 3: Protecting Workloads from the Instance to the Edge
+          
+            
+              <i class="fas fa-caret-right"></i>
+            
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/workshops/module3/scenario/" title="1. Scenario" class="dd-item ">
+        <a href="/workshops/module3/scenario/">
+        1. Scenario
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/workshops/module3/perimeter-assess/" title="2. Perimeter Layer - Assess" class="dd-item ">
+        <a href="/workshops/module3/perimeter-assess/">
+        2. Perimeter Layer - Assess
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/workshops/module3/perimeter-remediate/" title="3. Perimeter Layer - Remediate" class="dd-item ">
+        <a href="/workshops/module3/perimeter-remediate/">
+        3. Perimeter Layer - Remediate
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/workshops/module3/perimeter-verify/" title="4. Perimeter Layer - Verify" class="dd-item ">
+        <a href="/workshops/module3/perimeter-verify/">
+        4. Perimeter Layer - Verify
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/workshops/module3/host-assess/" title="5. Host Layer - Assess" class="dd-item ">
+        <a href="/workshops/module3/host-assess/">
+        5. Host Layer - Assess
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/workshops/module3/host-remediate/" title="6. Host Layer - Remediate" class="dd-item ">
+        <a href="/workshops/module3/host-remediate/">
+        6. Host Layer - Remediate
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/workshops/module3/host-verify/" title="7. Host Layer - Verify" class="dd-item ">
+        <a href="/workshops/module3/host-verify/">
+        7. Host Layer - Verify
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/workshops/module4/" title="Lab 4: AWS Secrets Manager with Amazon RDS and AWS Fargate" class="dd-item
+    
+        
+        ">
+      <a href="/workshops/module4/">
+          Lab 4: AWS Secrets Manager with Amazon RDS and AWS Fargate
+          
+            
+              <i class="fas fa-caret-right"></i>
+            
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/workshops/module4/scenario/" title="1. Architecture" class="dd-item ">
+        <a href="/workshops/module4/scenario/">
+        1. Architecture
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/workshops/module4/rds/" title="2. RDS with Secrets Manager" class="dd-item ">
+        <a href="/workshops/module4/rds/">
+        2. RDS with Secrets Manager
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/workshops/module4/fargate/" title="3. Fargate with Secrets Manager" class="dd-item ">
+        <a href="/workshops/module4/fargate/">
+        3. Fargate with Secrets Manager
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/ondemandtracks/" title="On-Demand Tracks" class="dd-item
+    
+        
+        ">
+      <a href="/ondemandtracks/">
+          On-Demand Tracks
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/ondemandtracks/advanced_container_security/" title="Advanced container security" class="dd-item
+    
+        
+        ">
+      <a href="/ondemandtracks/advanced_container_security/">
+          Advanced container security
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/ondemandtracks/cloud_security_multi_account/" title="Cloud security for everyone: Multi-account strategy" class="dd-item
+    
+        
+        ">
+      <a href="/ondemandtracks/cloud_security_multi_account/">
+          Cloud security for everyone: Multi-account strategy
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/ondemandtracks/cloud-enabled_security_origin/" title="Cloud-enabled security evolution with Origin Energy" class="dd-item
+    
+        
+        ">
+      <a href="/ondemandtracks/cloud-enabled_security_origin/">
+          Cloud-enabled security evolution with Origin Energy
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/ondemandtracks/federated_access_made_simple/" title="Federated access and authorisation made simple" class="dd-item
+    
+        
+        ">
+      <a href="/ondemandtracks/federated_access_made_simple/">
+          Federated access and authorisation made simple
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/ondemandtracks/secure_real-time_tracking_afl/" title="How AFL secures real-time player tracking with encryption" class="dd-item
+    
+        
+        ">
+      <a href="/ondemandtracks/secure_real-time_tracking_afl/">
+          How AFL secures real-time player tracking with encryption
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/ondemandtracks/secops_in_your_organization/" title="How to put SecOps to work in your organisation" class="dd-item
+    
+        
+        ">
+      <a href="/ondemandtracks/secops_in_your_organization/">
+          How to put SecOps to work in your organisation
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/ondemandtracks/neoband_in_th_cloud_xinja/" title="How Xinja built a neobank on the cloud" class="dd-item
+    
+        
+        ">
+      <a href="/ondemandtracks/neoband_in_th_cloud_xinja/">
+          How Xinja built a neobank on the cloud
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/ondemandtracks/iam-best-practices/" title="IAM: Best practices for managing identity with AWS" class="dd-item
+    
+        
+        ">
+      <a href="/ondemandtracks/iam-best-practices/">
+          IAM: Best practices for managing identity with AWS
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/ondemandtracks/intro-to-aws-sec/" title="Introduction to AWS Security" class="dd-item
+    
+        
+        ">
+      <a href="/ondemandtracks/intro-to-aws-sec/">
+          Introduction to AWS Security
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/ondemandtracks/sec-best-practices-war-way/" title="Security best practices: The Well-Architected way" class="dd-item
+    
+        
+        ">
+      <a href="/ondemandtracks/sec-best-practices-war-way/">
+          Security best practices: The Well-Architected way
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/ondemandtracks/security_fundamentals/" title="The fundamentals of AWS Security" class="dd-item
+    
+        
+        ">
+      <a href="/ondemandtracks/security_fundamentals/">
+          The fundamentals of AWS Security
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/training/" title="Learning Resources" class="dd-item
+    
+        
+        ">
+      <a href="/training/">
+          Learning Resources
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/links/" title="Additional Links" class="dd-item
+    
+        
+        ">
+      <a href="/links/">
+          Additional Links
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/survey/" title="Survey" class="dd-item
+    
+        
+        ">
+      <a href="/survey/">
+          Survey
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    
+    
+    <li data-nav-id="/faq/" title="FAQ" class="dd-item
+    
+        
+        ">
+      <a href="/faq/">
+          FAQ
+          
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Clear History</a></li>
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <left>
+
+    <h5 class="copyright">&copy; 2020 Amazon Web Services, Inc. or its Affiliates. All rights reserved.<h5>
+
+</left>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            <a href='/'>AWS Cloud Security Virtual Event</a> > Overview
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#workshops">Workshops</a></li>
+    <li><a href="#on-demand-tracks">On-Demand Tracks</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Overview
+            </h1>
+          
+
+        
+
+
+
+	<p>The AWS Cloud Security Virtual event aims to improve your cloud security skills through a series of guided workshops, Security JAM scenario challenges and on-demand talks. In this portal you will find the following:</p>
+<ul>
+<li><a href="#workshops">Workshops</a></li>
+<li><a href="#on-demand-tracks">On-Demand Tracks</a></li>
+</ul>
+<h2 id="workshops">Workshops</h2>
+<p>These workshops are designed to help you get familiar with AWS Security and Operational services so you can improve your security and compliance objectives. You&rsquo;ll be working with services such as AWS Systems Manager (operational management), AWS Config (configuration change management), Amazon Inspector (vulnerability &amp; behavior analysis) and AWS WAF (web application firewall).</p>
+<p>At the start of each workshop you will be able to watch a short video that will provide you an overview and a real world example.</p>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Description</th>
+<th>Skill Level</th>
+<th>Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/workshops/module1">Eliminate Bastion Hosts with Systems Manager</a></td>
+<td>In this session, you will configure AWS Systems Manager Session Manager to provide secure interactive access to your managed instances without the need to expose inbound ports, manage bastion hosts, or manage SSH keys. You will learn how Session Manager works by default and will progressively increase the security posture of your environment by enabling enhanced session encryption, configuring session logging and reducing default permissions.</td>
+<td>Beginner - Intermediate</td>
+<td>1 - 2 hours</td>
+</tr>
+<tr>
+<td><a href="/workshops/module2">Security Through Good Governance</a></td>
+<td>In this session, you will leverage Systems Manager and AWS Config to enforce governance across your AWS resources. You will collect inventory from your instances, automate patch management, ensuring consistency across your instances and automating compliance enforcement.</td>
+<td>Beginner - Intermediate</td>
+<td>1 - 2  hours</td>
+</tr>
+<tr>
+<td><a href="/workshops/module3">Protecting Workloads from the Instance to the Edge</a></td>
+<td>In this session, you will build an environment consisting of two Amazon Linux web servers behind an application load balancer. The web servers will be running a PHP web site that contains several vulnerabilities. You will then use AWS Web Application Firewall (WAF), Amazon Inspector and AWS Systems Manager to identify the vulnerabilities and remediate them.</td>
+<td>Advanced</td>
+<td>2 - 3 hours</td>
+</tr>
+<tr>
+<td><a href="/workshops/module4">AWS Secrets Manager with Amazon RDS and AWS Fargate</a></td>
+<td>In this session, you will access the RDS database with Secrets Manager. You will then use Secrets Manager to rotate the data base password. You will then use Secrets Manager to access the database again to show that you can continue to access the data base after the rotation. In the second phase of the lab, you will extend your use of Secrets Manager into an AWS Fargate container. You will create an Amazon ECS task definition to pass secrets to the Fargate container and then launch the Fargate container. You will then SSH into the container to show that the secret was passed to the container and that you can access the RDS data base.</td>
+<td>Intermediate - Advanced</td>
+<td>1 hour</td>
+</tr>
+</tbody>
+</table>
+<h2 id="on-demand-tracks">On-Demand Tracks</h2>
+<p>Watch great talks about AWS cloud security, presented by a mix of AWS customers and AWS experts.</p>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Description</th>
+<th>Skill Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/ondemandtracks/intro-to-aws-sec">Introduction to AWS Security</a></td>
+<td>Ensuring security and compliance is a shared responsibility between AWS and the customer. In this session, we introduce the AWS Shared Responsibility Model along with key security services that allow you to build security controls that are aligned to the NIST Cybersecurity Framework categories: identify, protect, detect, respond, and recover. You also hear from a financial institution in Singapore about how they are developing a cloud security strategy that allows innovation within defined risk guardrails.</td>
+<td>100</td>
+</tr>
+<tr>
+<td><a href="/ondemandtracks/advanced_container_security">Advanced container security</a></td>
+<td>Learn how to leverage the identity and authorisation, network security and secrets management features of the wider AWS platform for their containers, including Amazon Elastic Container Service (Amazon ECS) and Amazon Elastic Container Service for Kubernetes (Amazon EKS). We also discuss best practices for the security of your container images such as scanning them for known vulnerabilities.</td>
+<td>300</td>
+</tr>
+<tr>
+<td><a href="/ondemandtracks/cloud_security_multi_account">Cloud security for everyone: Multi-account strategy</a></td>
+<td>The cloud enables every business to have enterprise-grade security. Leveraging multiple accounts is an essential security pattern, even in small teams without dedicated security personnel. In this session, we dive deep into the accounts and learn how to configure them. Attendees are expected to have an understanding of the shared responsibility model and IAM.</td>
+<td>300</td>
+</tr>
+<tr>
+<td><a href="/ondemandtracks/cloud-enabled_security_origin">Cloud-enabled security evolution with Origin Energy</a></td>
+<td>Moving your business to the cloud is a once-in-a-generation opportunity to significantly evolve your security capability and culture. Origin Energy, Australia’s largest energy retailer, started its cloud journey a few years ago. In this session, Origin Energy’s chief security officer and its security lead for cloud discuss their experience transforming a largely outsourced security capability into an in-house, business-aligned team. Learn how the company builds and runs cloud-native security at scale, at low cost, and with improved security.</td>
+<td>200</td>
+</tr>
+<tr>
+<td><a href="/ondemandtracks/federated_access_made_simple">Federated access and authorisation made simple</a></td>
+<td>In this session, learn how to implement attribute-based access control with role-based access control. We discuss how you can use this strategy to ensure that people have the right access to the things they need in their role, and we show you how to simplify their IAM policies in the process. Also learn how automation can deliver the consistency of access and authorisation, and how you can apply this to your environment.</td>
+<td>200</td>
+</tr>
+<tr>
+<td><a href="/ondemandtracks/secure_real-time_tracking_afl">How AFL secures real-time player tracking with encryption</a></td>
+<td>Through the sharing of real-time data and insights about the prevailing game and players, fan engagement in sports has been revolutionised. However, the sensitivity, influence, and impact of such data, as determined by various entities in the sports ecosystem, is critical. In this session, discover how a highly secure application has been designed and implemented not only to appease the various sporting entities, but also to ensure data is kept secure.</td>
+<td>300</td>
+</tr>
+<tr>
+<td><a href="/ondemandtracks/secops_in_your_organization">How to put SecOps to work in your organisation</a></td>
+<td>Open Universities Australia (OUA) migrated their core business systems to AWS in 2014 and have continued to optimise their environment on AWS. Leveraging AWS tools, OUA have automated responses to security events, limiting intervention of engineering staff, and enabling secure self-service tasks to simplify access to secure systems. In this session, OUA covers what worked, what didn&rsquo;t, and what they learned along the way.</td>
+<td>200</td>
+</tr>
+<tr>
+<td><a href="/ondemandtracks/neoband_in_th_cloud_xinja">How Xinja built a neobank on the cloud</a></td>
+<td>Xinja is a 100-percent digital cloud-based neobank composed of a microservices architecture built with Kubernetes and Apache Kafka on AWS and hooked into many modern, cloud-based banking, payment, and channel platforms. This session focuses on how Xinja built its technology stack to exceed stringent security, risk, and resiliency requirements. Learn how it established a contemporary cloud network foundation, delivered transaction and deposit accounts with debit card payment capability, and integrated Apple Pay and Google Pay (including PCI DSS compliance). Additionally, hear how Xinja created multiple on-demand data pipelines and worked with APRA to secure its banking license and revolutionise its customers’ banking experience.</td>
+<td>300</td>
+</tr>
+<tr>
+<td><a href="/ondemandtracks/security_fundamentals">The fundamentals of AWS Security</a></td>
+<td>AWS offers an ever-growing landscape of services designed for a wide range of workloads in the cloud. But how do you secure all those different types of workloads? This session, intended for security-minded builders, introduces the fundamental AWS security building blocks that can be simply, easily, and authoritatively applied to anything you build on AWS.</td>
+<td>200</td>
+</tr>
+<tr>
+<td><a href="/ondemandtracks/iam-best-practices">IAM: Best practices for managing identity with AWS</a></td>
+<td>AWS Identity and Access Management (IAM) enables you to securely manage access to AWS services and resources. Using IAM, you can create and manage AWS users and groups, as well as use permissions to allow and deny their access to AWS resources. In this session, you learn best practices for managing user identity and permissions with AWS. We examine role-based access control (RBAC) and attribute-based access control (ABAC) models to ensure that people have the right access to what they need to perform their roles.</td>
+<td>200</td>
+</tr>
+<tr>
+<td><a href="/ondemandtracks/security_fundamentals">Security best practices: The Well-Architected way</a></td>
+<td>As you continually evolve your use of AWS, it’s important to consider ways to improve your security posture and take advantage of new security services and features. In this session, you explore architectural patterns for meeting common challenges, learn about service limits, and hear some tips and tricks, as well as learn ways to continually evaluate your architecture against best practices. Automation and tools are featured throughout, and we also include code giveaways!</td>
+<td>200</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/" title="AWS Cloud Security Virtual Event"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/workshops/" title="Workshops" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js"></script>
+    <script src="/js/perfect-scrollbar.min.js"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="/js/jquery.sticky.js"></script>
+    <script src="/js/featherlight.min.js"></script>
+    <script src="/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js"></script>
+    <script src="/js/learn.js"></script>
+    <script src="/js/hugo-learn.js"></script>
+
+    <link href="/mermaid/mermaid.css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>

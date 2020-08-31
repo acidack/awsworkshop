@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lab 1: Eliminate Bastion Hosts with Systems Manager on AWS Cloud Security Virtual Event</title>
+    <link>/workshops/module1/</link>
+    <description>Recent content in Lab 1: Eliminate Bastion Hosts with Systems Manager on AWS Cloud Security Virtual Event</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 18 Nov 2019 08:23:04 +1100</lastBuildDate>
+    
+	<atom:link href="/workshops/module1/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>1. Overview and Setup</title>
+      <link>/workshops/module1/scenario/</link>
+      <pubDate>Mon, 18 Nov 2019 17:11:06 +1100</pubDate>
+      
+      <guid>/workshops/module1/scenario/</guid>
+      <description>In today&amp;rsquo;s world of modern application development and immutable infrastructure deployed as code, there remains a number of reasons why engineers require shell-level access to their instances on occasion. They might need to kill runaway processes, debug problems on a live machine, or fine-tune configurations during development; all while maintaining a strong security profile.
+In this session, you will configure AWS Systems Manager Session Manager to provide secure interactive access to your managed instances without the need to expose inbound ports, manage bastion hosts, or manage SSH keys.</description>
+    </item>
+    
+    <item>
+      <title>2. Evaluate Session Manager Configuration</title>
+      <link>/workshops/module1/evaluate/</link>
+      <pubDate>Mon, 18 Nov 2019 17:11:28 +1100</pubDate>
+      
+      <guid>/workshops/module1/evaluate/</guid>
+      <description>To begin our evaluation, we need to examine the default configuration and behavior of Session Manager and determine what is needed to meet the requirements given to us for this project.
+Evaluate cross-platform behavior, security context and default privilege levels
+ Under Instances &amp;amp; Nodes in the AWS Systems Manager navigation menu, browse to the Managed Instances console. Select the session-manager-linux-prod instance, click Actions, click Start Session.  Now that we have established an interactive shell to the instance, let&amp;rsquo;s determine our user context on the instance and evaluate our privilege level.</description>
+    </item>
+    
+    <item>
+      <title>3. Configure Systems Manager Session Manager</title>
+      <link>/workshops/module1/configure/</link>
+      <pubDate>Mon, 18 Nov 2019 17:11:28 +1100</pubDate>
+      
+      <guid>/workshops/module1/configure/</guid>
+      <description>As we observed during our initial evaluation, our activity within a session is not yet being logged. In this step, we are going to configure Session Manager to store session log data in a specified Amazon S3 bucket for auditing purposes. The default option is for logs to be sent to an encrypted S3 bucket. Encryption is performed using the key specified for the bucket.
+Create a Custom Policy for Amazon S3 Bucket Access</description>
+    </item>
+    
+    <item>
+      <title>4. Use Port Forwarding For Web Redirection</title>
+      <link>/workshops/module1/portforward/</link>
+      <pubDate>Mon, 18 Nov 2019 17:11:28 +1100</pubDate>
+      
+      <guid>/workshops/module1/portforward/</guid>
+      <description>Session Manager Port Forwarding feature allows you to tunnel data from remote port on instance to a local port on client machine. This enables web redirection for user without opening inbound ports. You can use this feature using AWS CLI which requires you to install session-manager-plugin on client machine. It uses public SSM document AWS-StartPortForwardingSession that allows users to provide local and remote port numbers to enable port forwarding.
+Review SSM Document</description>
+    </item>
+    
+    <item>
+      <title>5. Enable SSH Through Session Manager</title>
+      <link>/workshops/module1/ssh/</link>
+      <pubDate>Mon, 18 Nov 2019 17:11:28 +1100</pubDate>
+      
+      <guid>/workshops/module1/ssh/</guid>
+      <description>Session Manager can be configured to connect to remote instance using Secure Shell(SSH) without opening inbound port or maintaining bastion host. You can also copy files between local and remote machine using Secure Copy Protocol(SCP). This feature uses public SSM document AWS-StartSSHSession.
+Review SSM Document
+ Browse to the Systems Manager Document console and review content of AWS-StartSSHSession document. Note that Session Type is Port and Default Port provided is 22.</description>
+    </item>
+    
+    <item>
+      <title>6. Enable RDP Through Session Manager</title>
+      <link>/workshops/module1/rdp/</link>
+      <pubDate>Mon, 18 Nov 2019 17:11:28 +1100</pubDate>
+      
+      <guid>/workshops/module1/rdp/</guid>
+      <description>You can tunnel Remote Desktop Protocol (RDP) using Port Forwarding feature of Session Manager to get access to remote Windows instance. This can be achieved without opening inbound port 3389 (default RDP port) on remote instance.
+You will require AWS CLI and RDP client installed on your local machine for this step and adequate access over the Internet. If you do not have required access, you may choose to skip this step.</description>
+    </item>
+    
+  </channel>
+</rss>
